@@ -95,13 +95,11 @@ h2 {
   border-spacing: 0 0.5rem;
 }
 
-table thead tr th:first-child, 
-table thead tr td:first-child {
+table thead tr th:first-child {
   border-radius: 0.75rem 0 0 0.75rem;
 }
 
-table thead tr th:last-child, 
-table thead tr td:last-child {
+table thead tr th:last-child {
   border-radius: 0 0.75rem 0.75rem 0;
 }
 
@@ -125,6 +123,14 @@ table td {
   background: var(--color-light50);
   padding: 1rem 2rem;
   font-weight: normal;
+}
+
+.description:first-child {
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.date:last-child {
+  border-radius: 0 0.75rem 0.75rem 0;
 }
 
 td.income {
