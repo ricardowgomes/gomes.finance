@@ -5,11 +5,86 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>gomes.finance$</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <header id="head">
+    <h1 id="logo">gomes<span id="cifr">.</span>finance<span id="cifr">$</span></h1>
+  </header>
 
+  <main class="container">
+    <section id="balance">
+      <h2>Balances</h2>
+
+      <div class="card">
+        <h3>entries</h3>
+        <p>CA$ 5,000.00</p>
+      </div>
+
+      <div class="card">
+        <h3>draws</h3>
+        <p>CA$ 5,000.00</p>
+      </div>
+
+      <div class="card total">
+        <h3 id="total">total</h3>
+        <p>CA$ 5,000.00</p>
+      </div>
+    </section>
+
+    <section id="transactions">
+      <h2>Transactions</h2>
+      <table id="data-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td class="description">Energy</td>
+            <td class="type">Basic</td>
+            <td class="expense">-CA$ 500.00</td>
+            <td class="date">May 4th 2021</td>
+          </tr>
+          <tr>
+            <td class="description">Netflix</td>
+            <td class="type">Subscriptions</td>
+            <td class="expense">-CA$ 12.50</td>
+            <td class="date">May 3rd 2021</td>
+          </tr>
+          <tr>
+            <td class="description">Nubank</td>
+            <td class="type">Salary</td>
+            <td class="income">CA$ 1,800.50</td>
+            <td class="date">May 2nd 2021</td>
+          </tr>
+          <tr>
+            <td class="description">Costco</td>
+            <td class="type">Groceries</td>
+            <td class="expense">-CA$ 800.00</td>
+            <td class="date">May 2nd 2021</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      gomes.finance$
+    </div>
+  </footer>
 </body>
 
 </html>
