@@ -20,26 +20,38 @@
 
   <main class="container">
     <section id="balance">
-      <h2>Balances</h2>
+      <h2 class="sr-only">Balances</h2>
 
       <div class="card">
-        <h3>entries</h3>
+        <h3>
+          <span>earnings</span>
+          <img src="./assets/income.svg" alt="income image">
+        </h3>
         <p>CA$ 5,000.00</p>
       </div>
 
       <div class="card">
-        <h3>draws</h3>
+        <h3>
+          <span>expenses</span>
+          <img src="./assets/expense.svg" alt="expense image">
+        </h3>
         <p>CA$ 5,000.00</p>
       </div>
 
       <div class="card total">
-        <h3 id="total">total</h3>
+        <h3 id="total">
+          <span>total</span>
+          <img src="./assets/total.svg" alt="total image">
+        </h3>
         <p>CA$ 5,000.00</p>
       </div>
     </section>
 
     <section id="transactions">
-      <h2>Transactions</h2>
+      <h2 class="sr-only">Transactions</h2>
+
+      <a href="#" onclick="Modal.openModal()" class="button new">+ New Transaction</a>
+
       <table id="data-table">
         <thead>
           <tr>
@@ -47,6 +59,7 @@
             <th>Type</th>
             <th>Amount</th>
             <th>Date</th>
+            <th></th>
           </tr>
         </thead>
 
@@ -56,35 +69,99 @@
             <td class="type">Basic</td>
             <td class="expense">-CA$ 500.00</td>
             <td class="date">May 4th 2021</td>
+            <td class="icon">
+              <img src="./assets/minus.svg" alt="remove transaction">
+            </td>
           </tr>
           <tr id="second-transaction">
             <td class="description">Netflix</td>
             <td class="type">Subscriptions</td>
             <td class="expense">-CA$ 12.50</td>
             <td class="date">May 3rd 2021</td>
+            <td class="icon">
+              <img src="./assets/minus.svg" alt="remove transaction">
+            </td>
           </tr>
           <tr id="third-transaction">
             <td class="description">Nubank</td>
             <td class="type">Salary</td>
             <td class="income">CA$ 1,800.50</td>
             <td class="date">May 2nd 2021</td>
+            <td class="icon">
+              <img src="./assets/minus.svg" alt="remove transaction">
+            </td>
           </tr>
           <tr id="forth-transaction">
             <td class="description">Costco</td>
             <td class="type">Groceries</td>
             <td class="expense">-CA$ 800.00</td>
             <td class="date">May 2nd 2021</td>
+            <td class="icon">
+              <img src="./assets/minus.svg" alt="remove transaction">
+            </td>
           </tr>
         </tbody>
       </table>
     </section>
   </main>
 
+  <div class="modal-overlay">
+    <div class="modal">
+      <div id="form">
+        <h2>New Transaction</h2>
+        <form action="">
+          <div class="input-group">
+            <label class="sr-only" for="description">Description</label>
+            <input type="text" id="description" name="description" placeholder="describe the transaction" />
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="type">Type</label>
+            <input type="text" id="type" name="type" placeholder="select a type" />
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="amount">Amount</label>
+            <input type="number" step="0.01" id="amount" name="amount" placeholder="0.00" />
+            <small class="help">Use the - symbol (minus) for expenses</small>
+          </div>
+
+          <div class="input-group">
+            <label class="sr-only" for="date">Date</label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <div class="input-group actions">
+            <a href="#" onclick="Modal.closeModal()" class="cancel button">Cancel</a>
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <div>
       gomes.finance$
     </div>
   </footer>
+
+  <script>
+    const Modal = {
+      openModal() {
+        document
+          .querySelector(".modal-overlay")
+          .classList
+          .add("active")
+      },
+
+      closeModal() {
+        document
+          .querySelector(".modal-overlay")
+          .classList.remove("active")
+      }
+    }
+  </script>
 </body>
 
 </html>
