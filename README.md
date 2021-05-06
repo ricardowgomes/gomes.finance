@@ -1,7 +1,7 @@
 <h1 align="center">
   <img alt="gomes.finances" title="gomes.finances" src="./assets/logob.svg" width="220px" />
 </h1>
-z
+
 <br>
 
 ## 🚀 Technologies
