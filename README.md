@@ -1,12 +1,8 @@
 <h1 align="center">
-  <img alt="gomes.finances" title="gomes.finances" src=".github/logo.svg" width="220px" />
+  <img alt="gomes.finances" title="gomes.finances" src="./assets/logo.svg" width="220px" />
 </h1>
 
 <br>
-
-<p align="center">
-  <img alt="gomes.finances" src=".github/assets/logo.svg" width="100%">
-</p>
 
 ## 🚀 Technologies
 
