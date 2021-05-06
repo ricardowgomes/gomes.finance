@@ -15,7 +15,11 @@
 
 <body>
   <header id="head">
-    <h1 id="logo">gomes<span id="cifr">.</span>finance<span id="cifr">$</span></h1>
+    <h1 id="logo">
+      <a href="index.html">
+        <img src="./assets/logo.svg" alt="Logo Gomes Finances">
+      </a>
+    </h1>
   </header>
 
   <main class="container">
@@ -27,7 +31,7 @@
           <span>earnings</span>
           <img src="./assets/income.svg" alt="income image">
         </h3>
-        <p>CA$ 5,000.00</p>
+        <p id="incomeDisplay">$ 0.00</p>
       </div>
 
       <div class="card">
@@ -35,7 +39,7 @@
           <span>expenses</span>
           <img src="./assets/expense.svg" alt="expense image">
         </h3>
-        <p>CA$ 5,000.00</p>
+        <p id="expenseDisplay">$ 0.00</p>
       </div>
 
       <div class="card total">
@@ -43,7 +47,7 @@
           <span>total</span>
           <img src="./assets/total.svg" alt="total image">
         </h3>
-        <p>CA$ 5,000.00</p>
+        <p id="totalDisplay">$ 0.00</p>
       </div>
     </section>
 
@@ -64,42 +68,6 @@
         </thead>
 
         <tbody>
-          <tr id="first-transaction">
-            <td class="description">Energy</td>
-            <td class="type">Basic</td>
-            <td class="expense">-CA$ 500.00</td>
-            <td class="date">May 4th 2021</td>
-            <td class="icon">
-              <img src="./assets/minus.svg" alt="remove transaction">
-            </td>
-          </tr>
-          <tr id="second-transaction">
-            <td class="description">Netflix</td>
-            <td class="type">Subscriptions</td>
-            <td class="expense">-CA$ 12.50</td>
-            <td class="date">May 3rd 2021</td>
-            <td class="icon">
-              <img src="./assets/minus.svg" alt="remove transaction">
-            </td>
-          </tr>
-          <tr id="third-transaction">
-            <td class="description">Nubank</td>
-            <td class="type">Salary</td>
-            <td class="income">CA$ 1,800.50</td>
-            <td class="date">May 2nd 2021</td>
-            <td class="icon">
-              <img src="./assets/minus.svg" alt="remove transaction">
-            </td>
-          </tr>
-          <tr id="forth-transaction">
-            <td class="description">Costco</td>
-            <td class="type">Groceries</td>
-            <td class="expense">-CA$ 800.00</td>
-            <td class="date">May 2nd 2021</td>
-            <td class="icon">
-              <img src="./assets/minus.svg" alt="remove transaction">
-            </td>
-          </tr>
         </tbody>
       </table>
     </section>
@@ -109,7 +77,7 @@
     <div class="modal">
       <div id="form">
         <h2>New Transaction</h2>
-        <form action="">
+        <form action="" onsubmit="Form.submit(event)">
           <div class="input-group">
             <label class="sr-only" for="description">Description</label>
             <input type="text" id="description" name="description" placeholder="describe the transaction" />
@@ -146,21 +114,8 @@
     </div>
   </footer>
 
-  <script>
-    const Modal = {
-      openModal() {
-        document
-          .querySelector(".modal-overlay")
-          .classList
-          .add("active")
-      },
+  <script src="./script.js">
 
-      closeModal() {
-        document
-          .querySelector(".modal-overlay")
-          .classList.remove("active")
-      }
-    }
   </script>
 </body>
 
